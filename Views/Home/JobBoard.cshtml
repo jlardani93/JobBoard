@@ -1,0 +1,14 @@
+<h1> JOB BOARD </h1>
+@if (Model != null)
+{
+    @foreach(var job in Model)
+    {
+        <h3>Job Title: @job.GetTitle()</h3>
+        <p>Job Description: @job.GetDesc() </p>
+        <p>Hourly Wage: @job.GetPay() </p>
+        <br>
+    }
+}
+
+<p><a href="/"> ADD ANOTHER OPENING </a></p>
+<p><a href="/ClearJobBoard"> CLEAR OPENINGS </a></p>
